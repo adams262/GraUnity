@@ -32,3 +32,4 @@ To do List:
 - exportowanie projektu
 - test i optymalizacja rozgrywki
 
+[diagramUnity.drawio.pdf](https://github.com/user-attachments/files/17651570/diagramUnity.drawio.pdf)
