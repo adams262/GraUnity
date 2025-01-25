@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_sprite_wallking v1_0: 594327884974037369
+      player_sprite_wallking v1_1: -33443677970510304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
