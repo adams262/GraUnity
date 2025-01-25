@@ -31,4 +31,9 @@ public class Patrol : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(transform.position, patrolPoints[currentPoint].position, moveSpeed * Time.deltaTime);
     }
+
+    public void Hurt()
+    {
+        Destroy(this.gameObject);
+    }
 }
