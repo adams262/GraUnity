@@ -105,6 +105,14 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
+
+        if (collision.collider.CompareTag("Spike"))
+        {
+            Hurt(); // Zadanie obrażeń graczowi
+            return;
+        }
+
+
     }
 
     // Funkcja do aktualizacji liczby żyć na UI
