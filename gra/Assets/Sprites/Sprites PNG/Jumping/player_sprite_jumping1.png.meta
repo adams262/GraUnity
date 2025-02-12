@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 78bf874f299de9a4395767df21482704
+guid: 89a4eca3f321f604b9fc0bb36c2eb3db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9142115894422977129
-    second: player_sprite_jumping v1_0
-  - first:
-      213: 8140539375317386247
-    second: player_sprite_jumping v1_1
+      213: -8923951891516022832
+    second: player_sprite_jumping1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -99,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_sprite_jumping v1_0
+      name: player_sprite_jumping1_0
       rect:
         serializedVersion: 2
         x: 8
@@ -131,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7954771f70ea02180800000000000000
-      internalID: -9142115894422977129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: player_sprite_jumping v1_1
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 11
-        width: 44
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7048fd17e6109f070800000000000000
-      internalID: 8140539375317386247
+      spriteID: 0df13892901c72480800000000000000
+      internalID: -8923951891516022832
       vertices: []
       indices: 
       edges: []
@@ -173,8 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      player_sprite_jumping v1_0: -9142115894422977129
-      player_sprite_jumping v1_1: 8140539375317386247
+      player_sprite_jumping1_0: -8923951891516022832
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
