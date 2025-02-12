@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     private bool isInvincible = false;
     private float invincibleTimer = 0f;
+    public bool facingRight = true;
+    public Animator animator;
 
     void Start()
     {
@@ -40,9 +42,21 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Skakanie
+        //if (Input.GetButtonDown("Jump") && isGrounded)
+        //{
+        //    rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        //}
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+        else if (isGrounded)
+        {
+            animator.SetBool("IsJumping", false);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", true);
         }
 
         // Obsługa nieśmiertelności
@@ -56,12 +70,35 @@ public class PlayerMovement : MonoBehaviour
         }
         // Aktualizacja tekstu HP
         UpdateHealthText();
+
+        //Animator
+        animator.SetFloat("Speed", Mathf.Abs(moveInput));
+
+        float h = Input.GetAxis("Horizontal");
+        if (h > 0 && !facingRight)
+            Flip();
+        else if (h < 0 && facingRight)
+            Flip();
+
+        //if (Input.GetButtonDown("Jump"))
+        //{
+        //    isGrounded = false;
+        //    animator.SetBool("IsJumping", true);
+        //}
     }
 
     void FixedUpdate()
     {
         // Ruch w poziomie
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
     }
 
     void Hurt()
@@ -80,6 +117,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
         }
+
+        GetComponent<SpriteRenderer>().color = new Color(1f, 0.30196078f, 0.30196078f);
+
+        GetComponent<SpriteRenderer>().color = new Color(0.388235229f, 0.3372549f, 1f);
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
